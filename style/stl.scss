@@ -42,6 +42,9 @@ header {
 /* Main Section */
 .land {
   overflow: hidden;
+  li {
+    font-size: 3rem;
+  }
 }
 section {
   /* height: 75vh; */
@@ -58,15 +61,13 @@ section {
   align-items: center;
   flex: 1 1 40rem;
   position: relative;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  &:hover {
+    .piche {
+      transform: translate(7%) scale(1);
+    }
+  }
 }
-.pic:hover .piche {
-  transform: translate(7%) scale(1);
-}
+
 .pic img {
   max-width: 100%;
   object-fit: cover;
@@ -76,15 +77,23 @@ section {
   z-index: -1;
   transform: translate(7%) scale(0.1);
   position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 
 section button {
+  transition: all 0.5s ease-in-out;
   border: none;
   border-radius: 1rem;
   background: gray;
   color: white;
   font-size: clamp(1rem, 2rem, 4rem);
   padding: 2rem 5rem;
+  &:hover {
+    border-radius: 2rem;
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
 }
 
 .text {
@@ -116,6 +125,9 @@ section button {
   justify-content: center;
   align-items: center;
   background: gray;
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 .bottom ul {
